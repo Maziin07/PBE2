@@ -1,0 +1,126 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('joias2.jpg'); /* Adicione o caminho correto da sua imagem aqui */
+    color: #5eb6e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos do container do formulário */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #110c0c;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Efeito de escala suave */
+}
+
+/* Estilo do título */
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Estilos dos grupos de campos do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo das labels */
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d6d2d2;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilos dos campos de entrada e selects */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #555;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efeito de foco nos campos de entrada e selects */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3498db;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Estilos do botão de envio */
+.form-group button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover no botão */
+.form-group button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Efeito de foco no botão */
+.form-group button:focus {
+    outline: none;
+}
+
+/* Estilo para os campos obrigatórios */
+.form-group input:required,
+.form-group select:required {
+    background-color: #f9f9f9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group button {
+        font-size: 14px;
+    }
+}
