@@ -1,0 +1,479 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Variáveis de cores */
+:root {
+    --dourado: #26a0c5;
+    --dourado-claro: #f1dfa4;
+    --cinza-escuro: #333;
+    --branco: #fff;
+    --preto: #000;
+    --fundo-claro: #f9f9f9;
+}
+
+body {
+    background-color: var(--fundo-claro);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--branco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--dourado-claro);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--dourado);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.destaque {
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dourado);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('imagens/banner.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--branco);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--dourado);
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--preto);
+}
+
+/* Categorias */
+.categorias {
+    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.secao-titulo {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--cinza-escuro);
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.secao-titulo::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 2px;
+    background-color: var(--dourado);
+    margin: 10px auto 0;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.categoria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.categoria-item:hover {
+    transform: translateY(-10px);
+}
+
+.categoria-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.categoria-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 20px;
+    color: var(--branco);
+    text-align: center;
+}
+
+.categoria-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* Destaques */
+.destaques {
+    background-color: var(--branco);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.destaques-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.destaques-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.produto {
+    padding: 20px;
+    background-color: var(--fundo-claro);
+    border-radius: 4px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.produto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.produto h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.preco {
+    color: var(--dourado);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.btn-pequeno {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+}
+
+/* Sobre nós */
+.sobre {
+    padding: 80px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Depoimentos */
+.depoimentos {
+    background-color: var(--dourado-claro);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.depoimentos-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.depoimento {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.depoimento p {
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.cliente {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Newsletter */
+.newsletter {
+    padding: 60px 0;
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    text-align: center;
+}
+
+.newsletter-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.newsletter h2 {
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.newsletter p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter-input {
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 50px 0 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: var(--dourado);
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: var(--branco);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-col a:hover {
+    opacity: 1;
+    color: var(--dourado);
+}
+
+.footer-col p {
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-link {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: var(--cinza-escuro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: var(--dourado);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .destaques-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .categorias-grid,
+    .destaques-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
